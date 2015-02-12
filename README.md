@@ -146,7 +146,8 @@ Put the content of `spark_key.pub` file in `public_key` and
 
 ## Usage
 
-Include `spark::master` and/or `spark::slave` in your node's `run_list`:
+Include `spark::master`, `spark::master_only`, and/or `spark::slave` in your node's `run_list`:
+The `spark::master_only` will only start the master vs start-all for `spark::master`. Needed for standalone master cluster using zookeeper.
 
 ```json
 {
